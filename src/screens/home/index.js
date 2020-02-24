@@ -7,6 +7,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import CenterSpace from '../../components/center-space';
 import Button from '@material-ui/core/Button';
+import Main from '../main';
 
 const useStyles = makeStyles({
 	wrapperBackground: {
@@ -27,29 +28,13 @@ const theme = createMuiTheme({
 const Home = () => {
 	const classes = useStyles();
 
-	const ButtonSection = () => (
-		<Fragment>
-			<Grid container justify={'center'}>
-				<Button>{'More About Me'}</Button>
-				<Button>{'My Projects'}</Button>
-			</Grid>
-		</Fragment>
-	);
-
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<div className={classes.wrapperBackground}>
 				<BackgroundParticles />
 			</div>
-			<CenterSpace>
-				<Typography variant={'h3'}>{'Hello!'}</Typography>
-				<Typography variant={'h5'}>
-					{'I am Steven Baumann, a fourth year ' +
-						'Computer Science and Innovation student.'}
-				</Typography>
-				<ButtonSection />
-			</CenterSpace>
+			<Main />
 		</ThemeProvider>
 	);
 };
