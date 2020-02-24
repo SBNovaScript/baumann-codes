@@ -3,7 +3,7 @@ import Particles from 'react-particles-js';
 import { makeStyles } from '@material-ui/core/styles';
 import { PARTICLES_CONFIG } from '../../data/particles-config';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(({
 	particles: {
 		height: '100%'
 	}
