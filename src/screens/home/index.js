@@ -1,119 +1,57 @@
-import React from "react";
-import Particles from 'react-particles-js';
+import React, { Fragment } from 'react';
+import { createMuiTheme, CssBaseline } from '@material-ui/core';
+import BackgroundParticles from '../../components/background-particles';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import { ThemeProvider } from '@material-ui/styles';
+import Grid from '@material-ui/core/Grid';
+import CenterSpace from '../../components/center-space';
+import Button from '@material-ui/core/Button';
 
-const Home = () => (
-    <Particles
-        params={{
-            particles: {
-                number: {
-                    value: 150,
-                    density: {
-                        enable: true,
-                        value_area: 1803.4120608655228
-                    }
-                },
-                color: {
-                    value: "#ffffff"
-                },
-                shape: {
-                    type: "circle",
-                    stroke: {
-                        width: 2,
-                        color: "#000000"
-                    },
-                    polygon: {
-                        nb_sides: 4
-                    },
-                    image: {
-                        src: "img/github.svg",
-                        width: 100,
-                        height: 100
-                    }
-                },
-                opacity: {
-                    value: 0.4008530152163807,
-                    random: false,
-                    anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 1.5,
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 40,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 0,
-                    color: "#ffffff",
-                    opacity: 0.3687847739990702,
-                    width: 0.6413648243462091
-                },
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "window",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "repulse"
-                    },
-                    onclick: {
-                        enable: false,
-                        mode: "bubble"
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 400,
-                        line_linked: {
-                            opacity: 1
-                        }
-                    },
-                    bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 3
-                    },
-                    repulse: {
-                        distance: 100,
-                        duration: 0.4
-                    },
-                    push: {
-                        particles_nb: 4
-                    },
-                    remove: {
-                        particles_nb: 2
-                    }
-                }
-            },
-            retina_detect: true
-        }}
-    />
-);
+const useStyles = makeStyles({
+	wrapperBackground: {
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		width: '100%',
+		height: '100%'
+	}
+});
+
+const theme = createMuiTheme({
+	palette: {
+		type: 'dark'
+	}
+});
+
+const Home = () => {
+	const classes = useStyles();
+
+	const ButtonSection = () => (
+		<Fragment>
+			<Grid container justify={'center'}>
+				<Button>{'More About Me'}</Button>
+				<Button>{'My Projects'}</Button>
+			</Grid>
+		</Fragment>
+	);
+
+	return (
+		<ThemeProvider theme={theme}>
+			<CssBaseline />
+			<div className={classes.wrapperBackground}>
+				<BackgroundParticles />
+			</div>
+			<CenterSpace>
+				<Typography variant={'h3'}>{'Hello!'}</Typography>
+				<Typography variant={'h5'}>
+					{'I am Steven Baumann, a fourth year ' +
+						'Computer Science and Innovation student.'}
+				</Typography>
+				<ButtonSection />
+			</CenterSpace>
+		</ThemeProvider>
+	);
+};
 
 export default Home;
