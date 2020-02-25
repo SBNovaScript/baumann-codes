@@ -1,16 +1,16 @@
-import Typography from '@material-ui/core/Typography';
 import CenterSpace from '../../components/center-space';
 import React from 'react';
 import ButtonSection from '../../components/button-section';
+import ConditionallyCenteredText from '../../components/conditionally-centered-text';
 
 const Main = () => {
 	return (
 		<CenterSpace>
-			<Typography variant={'h3'}>{'Hello!'}</Typography>
-			<Typography variant={'h5'}>
+			<ConditionallyCenteredText title>{'Hello!'}</ConditionallyCenteredText>
+			<ConditionallyCenteredText body>
 				{'I am Steven Baumann, a fourth year ' +
 					'Computer Science and Innovation student.'}
-			</Typography>
+			</ConditionallyCenteredText>
 			<ButtonSection showAboutButton showProjectsButton />
 		</CenterSpace>
 	);
