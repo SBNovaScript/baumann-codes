@@ -6,22 +6,59 @@ import { ListItemText } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import FadeInOrder from '../../components/fade-in-order';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles({
+	listItemText: {
+		textAlign: 'center'
+	}
+});
 
 const Projects = () => {
+	const classes = useStyles();
+
 	const projectsTitleText = 'Here are a selection of my projects: ';
+
+	const ListItemButtonLink = props => {
+		const { children, link, ...others } = props;
+
+		return (
+			<ListItem
+				button
+				component={'a'}
+				href={link}
+				target={'_blank'}
+				rel={'noopener noreferrer'}
+				{...others}
+			>
+				{children}
+			</ListItem>
+		);
+	};
+
+	const CenteredListItemText = ({ ...props }) => (
+		<ListItemText className={classes.listItemText} {...props} />
+	);
 
 	const ProjectsList = () => (
 		<List>
 			<FadeInOrder>
-				<ListItem button>
-					<ListItemText primary={'Test1'} />
-				</ListItem>
-				<ListItem button>
-					<ListItemText primary={'Test2'} />
-				</ListItem>
-				<ListItem button>
-					<ListItemText primary={'Test3'} />
-				</ListItem>
+				<ListItemButtonLink
+					link={'https://github.com/SBNovaScript/BlackHoleSimulation'}
+				>
+					<CenteredListItemText primary={'Black Hole Simulation'} />
+				</ListItemButtonLink>
+				<ListItemButtonLink link={'http://envirobox.emergentmediacenter.com/'}>
+					<CenteredListItemText primary={'Habitus Mundi'} />
+				</ListItemButtonLink>
+				<ListItemButtonLink
+					link={'https://github.com/SBNovaScript/baumann-codes'}
+				>
+					<CenteredListItemText primary={'This Website'} />
+				</ListItemButtonLink>
+				<ListItemButtonLink link={'https://github.com/SBNovaScript'}>
+					<CenteredListItemText primary={'My Github'} />
+				</ListItemButtonLink>
 			</FadeInOrder>
 		</List>
 	);

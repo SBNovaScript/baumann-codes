@@ -2,6 +2,7 @@ import React from 'react';
 import CenterSpace from '../../components/center-space';
 import ButtonSection from '../../components/button-section';
 import ConditionallyCenteredText from '../../components/conditionally-centered-text';
+import Button from '@material-ui/core/Button';
 
 const About = () => (
 	<CenterSpace>
@@ -17,7 +18,16 @@ const About = () => (
 				'have two jobs: one as a lead game programmer' +
 				' for an environmentally focused game funded by ' +
 				'Champlain College, and as a software engineering intern' +
-				' at DealerPolicy, Inc.'}
+				' at DealerPolicy, Inc. For more information, here is my '}
+			<Button
+				variant={'contained'}
+				component={'a'}
+				target={'_blank'}
+				rel={'noopener noreferrer'}
+				href={'https://www.linkedin.com/in/cs-stevenbaumann/'}
+			>
+				{'Linkedin'}
+			</Button>
 		</ConditionallyCenteredText>
 		<ButtonSection showHomeButton showProjectsButton />
 	</CenterSpace>

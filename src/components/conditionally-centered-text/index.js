@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
 			textAlign: 'center'
 		},
 		[theme.breakpoints.up('md')]: {
-			padding: theme.spacing(0, 20, 0, 20)
+			padding: theme.spacing(1, 20, 1, 20)
 		}
 	},
 	titleText: {
