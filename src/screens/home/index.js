@@ -4,6 +4,9 @@ import BackgroundParticles from '../../components/background-particles';
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import Main from '../main';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import About from '../about';
+import Projects from '../projects';
 
 const useStyles = makeStyles({
 	wrapperBackground: {
@@ -25,13 +28,25 @@ const Home = () => {
 	const classes = useStyles();
 
 	return (
-		<ThemeProvider theme={theme}>
-			<CssBaseline />
-			<div className={classes.wrapperBackground}>
-				<BackgroundParticles />
-			</div>
-			<Main />
-		</ThemeProvider>
+		<Router>
+			<ThemeProvider theme={theme}>
+				<CssBaseline />
+				<div className={classes.wrapperBackground}>
+					<BackgroundParticles />
+				</div>
+				<Switch>
+					<Route path={'/about'}>
+						<About />
+					</Route>
+					<Route path={'/projects'}>
+						<Projects />
+					</Route>
+					<Route path={'/'}>
+						<Main />
+					</Route>
+				</Switch>
+			</ThemeProvider>
+		</Router>
 	);
 };
 

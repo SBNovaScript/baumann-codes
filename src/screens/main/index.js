@@ -1,19 +1,9 @@
 import Typography from '@material-ui/core/Typography';
 import CenterSpace from '../../components/center-space';
-import React, { Fragment } from 'react';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import React from 'react';
+import ButtonSection from '../../components/button-section';
 
 const Main = () => {
-	const ButtonSection = () => (
-		<Fragment>
-			<Grid container justify={'center'}>
-				<Button>{'More About Me'}</Button>
-				<Button>{'My Projects'}</Button>
-			</Grid>
-		</Fragment>
-	);
-
 	return (
 		<CenterSpace>
 			<Typography variant={'h3'}>{'Hello!'}</Typography>
@@ -21,7 +11,7 @@ const Main = () => {
 				{'I am Steven Baumann, a fourth year ' +
 					'Computer Science and Innovation student.'}
 			</Typography>
-			<ButtonSection />
+			<ButtonSection showAboutButton showProjectsButton />
 		</CenterSpace>
 	);
 };
