@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 const Projects = () => {
 	const classes = useStyles();
 
-	const projectsTitleText = 'Here are a selection of my projects: ';
+	const projectsTitleText = 'Here is a selection of my projects: ';
 
 	const ListItemButtonLink = props => {
 		const { children, link, ...others } = props;
@@ -44,17 +44,17 @@ const Projects = () => {
 		<List>
 			<FadeInOrder>
 				<ListItemButtonLink
+					link={'https://github.com/SBNovaScript/baumann-codes'}
+				>
+					<CenteredListItemText primary={'Baumann.codes website'} />
+				</ListItemButtonLink>
+				<ListItemButtonLink
 					link={'https://github.com/SBNovaScript/BlackHoleSimulation'}
 				>
 					<CenteredListItemText primary={'Black Hole Simulation'} />
 				</ListItemButtonLink>
 				<ListItemButtonLink link={'http://envirobox.emergentmediacenter.com/'}>
 					<CenteredListItemText primary={'Habitus Mundi'} />
-				</ListItemButtonLink>
-				<ListItemButtonLink
-					link={'https://github.com/SBNovaScript/baumann-codes'}
-				>
-					<CenteredListItemText primary={'This Website'} />
 				</ListItemButtonLink>
 				<ListItemButtonLink link={'https://github.com/SBNovaScript'}>
 					<CenteredListItemText primary={'My Github'} />

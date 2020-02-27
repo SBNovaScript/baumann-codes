@@ -14,13 +14,11 @@ const About = () => (
 				' Innovation major at Champlain College,' +
 				' which is located in Burlington, Vermont.' +
 				' My hometown is Trumbull, Connecticut, ' +
-				'located just an hour away from NYC. I currently ' +
-				'have two jobs: one as a lead game programmer' +
-				' for an environmentally focused game funded by ' +
-				'Champlain College, and as a software engineering intern' +
-				' at DealerPolicy, Inc. For more information, here is my '}
+				'located just an hour away from NYC. I am currently employed as ' +
+				'both a Lead Game Programmer for an environmentally-focused game, ' +
+				'funded by Champlain College, and as a Software Engineering Intern ' +
+				'at DealerPolicy, Inc. For more information: '}
 			<Button
-				variant={'contained'}
 				component={'a'}
 				target={'_blank'}
 				rel={'noopener noreferrer'}
