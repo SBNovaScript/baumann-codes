@@ -7,10 +7,15 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import FadeInOrder from '../../components/fade-in-order';
 import { makeStyles } from '@material-ui/styles';
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
 	listItemText: {
 		textAlign: 'center'
+	},
+	listItemButton: {
+		margin: '0 auto'
 	}
 });
 
@@ -23,15 +28,10 @@ const Projects = () => {
 		const { children, link, ...others } = props;
 
 		return (
-			<ListItem
-				button
-				component={'a'}
-				href={link}
-				target={'_blank'}
-				rel={'noopener noreferrer'}
-				{...others}
-			>
-				{children}
+			<ListItem {...others}>
+				<Button className={classes.listItemButton} component={Link} to={link}>
+					{children}
+				</Button>
 			</ListItem>
 		);
 	};
@@ -43,20 +43,16 @@ const Projects = () => {
 	const ProjectsList = () => (
 		<List>
 			<FadeInOrder>
-				<ListItemButtonLink
-					link={'https://github.com/SBNovaScript/baumann-codes'}
-				>
+				<ListItemButtonLink link={'/projects/website'}>
 					<CenteredListItemText primary={'Baumann.codes website'} />
 				</ListItemButtonLink>
-				<ListItemButtonLink
-					link={'https://github.com/SBNovaScript/BlackHoleSimulation'}
-				>
+				<ListItemButtonLink link={'/projects/black_hole'}>
 					<CenteredListItemText primary={'Black Hole Simulation'} />
 				</ListItemButtonLink>
-				<ListItemButtonLink link={'http://envirobox.emergentmediacenter.com/'}>
-					<CenteredListItemText primary={'Habitus Mundi'} />
+				<ListItemButtonLink link={'/projects/project_egg'}>
+					<CenteredListItemText primary={'Project E.G.G.'} />
 				</ListItemButtonLink>
-				<ListItemButtonLink link={'https://github.com/SBNovaScript'}>
+				<ListItemButtonLink link={'/projects/github'}>
 					<CenteredListItemText primary={'My Github'} />
 				</ListItemButtonLink>
 			</FadeInOrder>
