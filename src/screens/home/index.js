@@ -7,6 +7,7 @@ import Main from '../main';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from '../about';
 import Projects from '../projects';
+import BlackHoleProject from '../blackHoleProject';
 
 const useStyles = makeStyles({
 	wrapperBackground: {
@@ -38,8 +39,11 @@ const Home = () => {
 					<Route path={'/about'}>
 						<About />
 					</Route>
-					<Route path={'/projects'}>
+					<Route exact path={'/projects'}>
 						<Projects />
+					</Route>
+					<Route path={'/projects/black_hole'}>
+						<BlackHoleProject />
 					</Route>
 					<Route path={'/'}>
 						<Main />
