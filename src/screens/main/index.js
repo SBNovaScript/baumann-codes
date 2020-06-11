@@ -8,8 +8,8 @@ const Main = () => {
 		<CenterSpace>
 			<ConditionallyCenteredText title>{'Hello!'}</ConditionallyCenteredText>
 			<ConditionallyCenteredText body>
-				{'I am Steven Baumann, a fourth year ' +
-					'Computer Science and Innovation student.'}
+				{'I am Steven Baumann, a software engineer from ' +
+					'Trumbull, Connecticut.'}
 			</ConditionallyCenteredText>
 			<ButtonSection showAboutButton showProjectsButton />
 		</CenterSpace>
