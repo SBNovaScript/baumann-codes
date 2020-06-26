@@ -7,7 +7,7 @@ import Main from '../main';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from '../about';
 import Projects from '../projects';
-import BlackHoleProject from '../blackHoleProject';
+import BlackHoleProject from '../black-hole-project';
 
 const useStyles = makeStyles({
 	wrapperBackground: {
