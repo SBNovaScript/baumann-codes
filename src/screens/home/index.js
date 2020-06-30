@@ -1,5 +1,9 @@
 import React from 'react';
-import { createMuiTheme, CssBaseline } from '@material-ui/core';
+import {
+	createMuiTheme,
+	CssBaseline,
+	responsiveFontSizes
+} from '@material-ui/core';
 import BackgroundParticles from '../../components/background-particles';
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -19,11 +23,13 @@ const useStyles = makeStyles({
 	}
 });
 
-const theme = createMuiTheme({
-	palette: {
-		type: 'dark'
-	}
-});
+const theme = responsiveFontSizes(
+	createMuiTheme({
+		palette: {
+			type: 'dark'
+		}
+	})
+);
 
 const Home = () => {
 	const classes = useStyles();

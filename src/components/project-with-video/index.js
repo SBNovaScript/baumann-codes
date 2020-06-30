@@ -8,14 +8,21 @@ import Button from '@material-ui/core/Button';
 import { Card, CardHeader } from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import FadeInOrder from '../fade-in-order';
 
 const useStyles = makeStyles(theme => ({
-	body: {
-		margin: '0 25% 0 25%'
+	media: {
+		[theme.breakpoints.down('sm')]: {
+			height: theme.spacing(30),
+			width: '90vw'
+		},
+		[theme.breakpoints.up('sm')]: {
+			height: theme.spacing(45),
+			width: theme.spacing(80)
+		}
 	},
-	image: {
-		height: theme.spacing(50),
-		width: theme.spacing(80)
+	typography: {
+		textAlign: 'center'
 	}
 }));
 
@@ -34,47 +41,52 @@ const ProjectWithVideo = ({
 
 	const ReactPlayerWithSubtitle = ({ url, subtitle }) => (
 		<Card>
-			<CardMedia>
+			<CardMedia className={classes.media}>
 				<ReactPlayer url={url} playing volume={0} muted controls loop />
 			</CardMedia>
-			<CardContent>
-				<Typography variant={'body2'}>{subtitle}</Typography>
-			</CardContent>
+			{/*TODO: Fix Video Caption.*/}
+			{/*<CardContent>*/}
+			{/*	<Typography className={classes.typography} variant={'body2'}>*/}
+			{/*		{subtitle}*/}
+			{/*	</Typography>*/}
+			{/*</CardContent>*/}
 		</Card>
 	);
 
 	const Image = ({ image, imageTitle }) => (
 		<Card>
-			<CardMedia className={classes.image} image={image} title={imageTitle} />
+			<CardMedia className={classes.media} image={image} title={imageTitle} />
 			<CardContent>
-				<Typography variant={'body2'}>{imageTitle}</Typography>
+				<Typography className={classes.typography} variant={'body2'}>
+					{imageTitle}
+				</Typography>
 			</CardContent>
 		</Card>
 	);
 
 	return (
-		<CenterSpace>
-			<Typography gutterBottom variant={'h2'}>
-				{title}
-			</Typography>
-			<Typography className={classes.body} variant={'h5'}>
-				{description1}
-			</Typography>
-			<ReactPlayerWithSubtitle subtitle={videoSubtitle} url={url} />
-			<Typography className={classes.body} variant={'h5'}>
-				{description2}
-			</Typography>
-			<Image image={image} imageTitle={imageTitle} />
-			<Button
-				component={'a'}
-				target={'_blank'}
-				rel={'noopener noreferrer'}
-				href={link}
-				variant={'contained'}
-			>
-				{linkDescription}
-			</Button>
-			<ButtonSection showAboutButton showProjectsButton showHomeButton />
+		<CenterSpace useSpaceBetween>
+				<Typography gutterBottom variant={'h3'}>
+					{title}
+				</Typography>
+				<Typography className={classes.typography} variant={'body1'}>
+					{description1}
+				</Typography>
+				<ReactPlayerWithSubtitle subtitle={videoSubtitle} url={url} />
+				<Typography className={classes.typography} variant={'body1'}>
+					{description2}
+				</Typography>
+				<Image image={image} imageTitle={imageTitle} />
+				<Button
+					component={'a'}
+					target={'_blank'}
+					rel={'noopener noreferrer'}
+					href={link}
+					variant={'contained'}
+				>
+					{linkDescription}
+				</Button>
+				<ButtonSection showAboutButton showProjectsButton showHomeButton />
 		</CenterSpace>
 	);
 };
