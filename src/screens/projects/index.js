@@ -43,17 +43,20 @@ const Projects = () => {
 	const ProjectsList = () => (
 		<List>
 			<FadeInOrder>
-				<ListItemButtonLink link={'/projects/website'}>
-					<CenteredListItemText primary={'Baumann.codes website'} />
-				</ListItemButtonLink>
+				{/*<ListItemButtonLink link={'/projects/website'}>*/}
+				{/*	<CenteredListItemText primary={'Baumann.codes website'} />*/}
+				{/*</ListItemButtonLink>*/}
 				<ListItemButtonLink link={'/projects/black_hole'}>
 					<CenteredListItemText primary={'Black Hole Simulation'} />
 				</ListItemButtonLink>
 				<ListItemButtonLink link={'/projects/project_egg'}>
 					<CenteredListItemText primary={'Project E.G.G.'} />
 				</ListItemButtonLink>
-				<ListItemButtonLink link={'/projects/github'}>
-					<CenteredListItemText primary={'My Github'} />
+				{/*<ListItemButtonLink link={'/projects/github'}>*/}
+				{/*	<CenteredListItemText primary={'My Github'} />*/}
+				{/*</ListItemButtonLink>*/}
+				<ListItemButtonLink link={'/projects/mood_web'}>
+					<CenteredListItemText primary={'MoodWeb'} />
 				</ListItemButtonLink>
 			</FadeInOrder>
 		</List>

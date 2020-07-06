@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectWithVideo from '../../components/project-with-video';
-import BlackHoleDemo from '../../media/BlackHole/BlackHoleDemo.mp4';
-import BlackHoleImage from '../../media/BlackHole/BlackHole.jpg';
+import BlackHoleDemo from '../../media/black-hole/BlackHoleDemo.mp4';
+import BlackHoleImage from '../../media/black-hole/BlackHole.jpg';
 
 const BlackHoleProject = () => {
 	return (

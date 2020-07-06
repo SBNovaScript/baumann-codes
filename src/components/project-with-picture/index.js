@@ -26,32 +26,18 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const ProjectWithVideo = ({
+const ProjectWithPicture = ({
 	title,
-	url,
 	description1,
 	description2,
-	videoSubtitle,
-	image,
-	imageTitle,
+	image1,
+	image2,
+	image1Title,
+	image2Title,
 	link,
 	linkDescription
 }) => {
 	const classes = useStyles();
-
-	const ReactPlayerWithSubtitle = ({ url, subtitle }) => (
-		<Card>
-			<CardMedia className={classes.media}>
-				<ReactPlayer url={url} playing volume={0} muted controls loop />
-			</CardMedia>
-			{/*TODO: Fix Video Caption.*/}
-			{/*<CardContent>*/}
-			{/*	<Typography className={classes.typography} variant={'body2'}>*/}
-			{/*		{subtitle}*/}
-			{/*	</Typography>*/}
-			{/*</CardContent>*/}
-		</Card>
-	);
 
 	const Image = ({ image, imageTitle }) => (
 		<Card>
@@ -72,11 +58,11 @@ const ProjectWithVideo = ({
 			<Typography className={classes.typography} variant={'body1'}>
 				{description1}
 			</Typography>
-			<ReactPlayerWithSubtitle subtitle={videoSubtitle} url={url} />
+			<Image image={image1} imageTitle={image1Title} />
 			<Typography className={classes.typography} variant={'body1'}>
 				{description2}
 			</Typography>
-			<Image image={image} imageTitle={imageTitle} />
+			<Image image={image2} imageTitle={image2Title} />
 			<Button
 				component={'a'}
 				target={'_blank'}
@@ -91,4 +77,4 @@ const ProjectWithVideo = ({
 	);
 };
 
-export default ProjectWithVideo;
+export default ProjectWithPicture;

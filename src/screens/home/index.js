@@ -12,6 +12,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from '../about';
 import Projects from '../projects';
 import BlackHoleProject from '../black-hole-project';
+import ProjectEGG from '../project-egg';
+import MoodWeb from '../mood-web';
 
 const useStyles = makeStyles({
 	wrapperBackground: {
@@ -50,6 +52,12 @@ const Home = () => {
 					</Route>
 					<Route path={'/projects/black_hole'}>
 						<BlackHoleProject />
+					</Route>
+					<Route path={'/projects/project_egg'}>
+						<ProjectEGG />
+					</Route>
+					<Route path={'/projects/mood_web'}>
+						<MoodWeb />
 					</Route>
 					<Route path={'/'}>
 						<Main />
