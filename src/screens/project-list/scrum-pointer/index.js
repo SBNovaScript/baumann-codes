@@ -15,7 +15,7 @@ const ScrumPointer = () => (
 		image1Title={'The Home Page.'}
 		description2={
 			'Scrum pointer uses Typescript, Feathersjs, and Bootstrap to ' +
-			'create a seamless scrum pointing solution.'
+			'seamlessly connect users together in realtime.'
 		}
 		image2={ExampleChannel}
 		image2Title={'An Example Room.'}

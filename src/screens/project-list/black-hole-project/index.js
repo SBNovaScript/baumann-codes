@@ -10,7 +10,8 @@ const BlackHoleProject = () => {
 			url={BlackHoleDemo}
 			description1={
 				'Implementation of a black hole simulation in ' +
-				'Unity for the Microsoft Hololens. Our focus for this project was to provide ' +
+				'Unity for the Microsoft Hololens, created in a pair as my senior college project. ' +
+				'Our focus for this project was to provide ' +
 				'educators with an interactable black hole using real equations, to inspire ' +
 				'more students to persue Astronomy and Computer Science.'
 			}

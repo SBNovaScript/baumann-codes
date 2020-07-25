@@ -8,12 +8,12 @@ const ProjectEGG = () => (
 		title={'Project E.G.G.'}
 		description1={
 			'An environmentally focused exploration game, where the user changes the world ' +
-			'for the user that comes after them. Made on a team of 8, I was one of the founders ' +
+			'for the user that comes after them. Made on a team of 8, I was one of the founding members ' +
 			'of this project, and worked on it from January of 2019 to May of 2020. I was the lead ' +
 			"programmer for this game, where I created it's foundation and contributed to the " +
 			'creation of incremental updates. I ' +
 			'also created the fullstack portion of the game, where it connects to a MySQL database ' +
-			'through an api I wrote in PHP.'
+			'through a PHP based API.'
 		}
 		image1={Widescreen}
 		image1Title={'The Main World'}

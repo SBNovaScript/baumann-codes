@@ -9,7 +9,7 @@ const MoodWeb = () => {
 			title={'MoodWeb'}
 			description1={
 				'MoodWeb is a fullstack social network for sharing your mood. ' +
-				'Written in Node.js, React, and using a MongoDB backend, Moodweb provides ' +
+				'Written in Node.js, React, and using a MongoDB backend, MoodWeb provides ' +
 				'A seamless social network experience.'
 			}
 			image1={AddNew}
