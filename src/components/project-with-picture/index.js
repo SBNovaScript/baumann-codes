@@ -1,14 +1,12 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import CenterSpace from '../center-space';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/styles';
 import ButtonSection from '../button-section';
-import ReactPlayer from 'react-player/lazy';
 import Button from '@material-ui/core/Button';
-import { Card, CardHeader } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import FadeInOrder from '../fade-in-order';
 
 const useStyles = makeStyles(theme => ({
 	media: {

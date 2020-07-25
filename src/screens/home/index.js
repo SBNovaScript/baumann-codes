@@ -11,9 +11,10 @@ import Main from '../main';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from '../about';
 import Projects from '../projects';
-import BlackHoleProject from '../black-hole-project';
-import ProjectEGG from '../project-egg';
-import MoodWeb from '../mood-web';
+import BlackHoleProject from '../project-list/black-hole-project';
+import ProjectEGG from '../project-list/project-egg';
+import MoodWeb from '../project-list/mood-web';
+import ScrumPointer from '../project-list/scrum-pointer';
 
 const useStyles = makeStyles({
 	wrapperBackground: {
@@ -36,6 +37,13 @@ const theme = responsiveFontSizes(
 const Home = () => {
 	const classes = useStyles();
 
+	const routes = {
+		black_hole: <BlackHoleProject />,
+		project_egg: <ProjectEGG />,
+		mood_web: <MoodWeb />,
+		scrum_pointer: <ScrumPointer />
+	};
+
 	return (
 		<Router>
 			<ThemeProvider theme={theme}>
@@ -50,15 +58,9 @@ const Home = () => {
 					<Route exact path={'/projects'}>
 						<Projects />
 					</Route>
-					<Route path={'/projects/black_hole'}>
-						<BlackHoleProject />
-					</Route>
-					<Route path={'/projects/project_egg'}>
-						<ProjectEGG />
-					</Route>
-					<Route path={'/projects/mood_web'}>
-						<MoodWeb />
-					</Route>
+					{Object.entries(routes).map((route, i) => (
+						<Route key={i} path={'/projects/' + route[0]}>{route[1]}</Route>
+					))}
 					<Route path={'/'}>
 						<Main />
 					</Route>
