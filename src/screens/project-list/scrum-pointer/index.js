@@ -9,7 +9,7 @@ const ScrumPointer = () => (
 		description1={
 			'A fullstack, real-time scrum pointing solution! A group ' +
 			'of users connects to a room, and collectively point scrum ticket items ' +
-			'in real time.'
+			'in realtime.'
 		}
 		image1={HomePage}
 		image1Title={'The Home Page.'}
