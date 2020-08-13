@@ -1,28 +1,12 @@
 import React from 'react';
 import CenterSpace from '../center-space';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/styles';
 import ButtonSection from '../button-section';
 import Button from '@material-ui/core/Button';
 import { Card } from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-
-const useStyles = makeStyles(theme => ({
-	media: {
-		[theme.breakpoints.down('sm')]: {
-			height: theme.spacing(30),
-			width: '90vw'
-		},
-		[theme.breakpoints.up('sm')]: {
-			height: theme.spacing(45),
-			width: theme.spacing(80)
-		}
-	},
-	typography: {
-		textAlign: 'center'
-	}
-}));
+import { useProjectStyles } from '../../lib/common-themes';
 
 const ProjectWithPicture = ({
 	title,
@@ -35,7 +19,7 @@ const ProjectWithPicture = ({
 	link,
 	linkDescription
 }) => {
-	const classes = useStyles();
+	const classes = useProjectStyles();
 
 	const Image = ({ image, imageTitle }) => (
 		<Card>
@@ -53,11 +37,11 @@ const ProjectWithPicture = ({
 			<Typography gutterBottom variant={'h3'}>
 				{title}
 			</Typography>
-			<Typography className={classes.typography} variant={'body1'}>
+			<Typography className={classes.description} variant={'body1'}>
 				{description1}
 			</Typography>
 			<Image image={image1} imageTitle={image1Title} />
-			<Typography className={classes.typography} variant={'body1'}>
+			<Typography className={classes.description} variant={'body1'}>
 				{description2}
 			</Typography>
 			<Image image={image2} imageTitle={image2Title} />
