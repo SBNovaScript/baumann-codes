@@ -7,19 +7,20 @@ const ProjectEGG = () => (
 	<ProjectWithPicture
 		title={'Project E.G.G.'}
 		description1={
-			'An environmentally focused exploration game, where the user changes the world ' +
-			'for the user that comes after them. Made on a team of 8, I was one of the founding members ' +
-			'of this project, and worked on it from January of 2019 to May of 2020. I was the lead ' +
+			'An environmentally focused exploration game, made on a team of 8 for ' +
+			"Champlain College's Emergent Media Center. In this game, the user changes the world " +
+			'for the user that comes after them. I was the lead ' +
 			"programmer for this game, where I created it's foundation and contributed to the " +
 			'creation of incremental updates. I ' +
-			'also created the fullstack portion of the game, where it connects to a MySQL database ' +
-			'through a PHP based API.'
+			'also created the fullstack portion of the game, where it connects to a ' +
+			'MySQL database through a PHP based API.'
 		}
 		image1={Widescreen}
 		image1Title={'The Main World'}
 		description2={
-			'This project was funded by the Emergent Media Center, a branch of Champlain College ' +
-			'located in Burlington, Vermont. The name of our team was Envirobox.'
+			'While this game is still in development at the EMC, our team was able ' +
+			'to portray the ' +
+			'intended message with the resulting demo we created.'
 		}
 		link={'https://projectegg.emergentmediacenter.com/'}
 		linkDescription={'Live Demo'}

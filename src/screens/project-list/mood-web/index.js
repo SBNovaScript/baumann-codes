@@ -8,7 +8,7 @@ const MoodWeb = () => {
 		<ProjectWithPicture
 			title={'MoodWeb'}
 			description1={
-				'MoodWeb is a fullstack social network for sharing your mood. ' +
+				'MoodWeb is a fullstack social network for sharing your mood! ' +
 				'Written in Node.js, React, and using a MongoDB backend, MoodWeb provides ' +
 				'A seamless social network experience.'
 			}
@@ -16,7 +16,7 @@ const MoodWeb = () => {
 			image1Title={'Add a new mood'}
 			description2={
 				'While this project is still in development, the current demo shows ' +
-				"my proof of concept of it's design."
+				"the project's proof of concept."
 			}
 			link={'https://github.com/SBNovaScript/MoodWeb'}
 			linkDescription={'MoodWeb Code'}
