@@ -10,14 +10,17 @@ const About = () => (
 			{'More About Me:'}
 		</ConditionallyCenteredText>
 		<ConditionallyCenteredText body>
-			{'I have recently graduated with a degree in Computer Science and' +
-				' Innovation, with a specialty in Software Engineering,' +
-				' and a minor in Game Programming from Champlain College.' +
-				' My hometown is Trumbull, Connecticut, ' +
-				'located just an hour away from NYC. My previous experience includes being ' +
-				'both a Lead Game Programmer for an environmentally-focused game ' +
-				'funded by Champlain College, and as a Software Engineering Intern.' +
-				' For more information: '}
+			{'I have recently graduated from Champlain College with a degree in ' +
+				'Computer Science and Innovation, a specialty in Software Engineering, ' +
+				'and a minor in Game Programming. While seeking employment, I am ' +
+				'creating full stack applications to showcase my programming knowledge. ' +
+				'My hometown is Trumbull, Connecticut, ' +
+				'located just an hour away from NYC. ' +
+				'My professional experience includes employment as ' +
+				'a Lead Programmer for an environmentally-focused game ' +
+				'funded by Champlain College, and as a ' +
+				'Software Engineering Intern at DealerPolicy, Inc. ' +
+				'For more information: '}
 			<Button
 				component={'a'}
 				target={'_blank'}
