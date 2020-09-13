@@ -1,13 +1,12 @@
 import React from 'react';
 import ProjectWithVideo from '../../../components/project-with-video';
-import BlackHoleDemo from '../../../media/black-hole/BlackHoleDemo.mp4';
 import BlackHoleImage from '../../../media/black-hole/BlackHole.jpg';
 
 const BlackHoleProject = () => {
 	return (
 		<ProjectWithVideo
 			title={'Black Hole Project'}
-			url={BlackHoleDemo}
+			url={'https://www.youtube.com/watch?v=ZfDB6imimPA'}
 			description1={
 				'For my senior college capstone project, my capstone partner and I ' +
 				'created a fully functional and accurate augmented reality black hole ' +
