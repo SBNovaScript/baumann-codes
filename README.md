@@ -4,6 +4,8 @@ This is where I archive some of my featured projects, and have info about me.
 
 The main code is located in the src/ folder.
 
+Each project has it's own dedicated directory. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
