@@ -8,6 +8,10 @@ Each project has it's own dedicated directory.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# TODO
+
+Extend the projects section to allow more media formats.
+
 ## Available Scripts
 
 In the project directory, you can run:
