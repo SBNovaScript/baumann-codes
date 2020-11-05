@@ -8,12 +8,13 @@ const ElectionTracker = () => {
 			title={'2020 Presidential Election Tracker'}
 			url={'https://youtu.be/8Oz0sbeu238'}
 			description1={
-				'I created a 2020 presidential election tracker, which polls a New York Times ' +
+				'I created a mobile first 2020 presidential election tracker,' +
+				' which polls a New York Times ' +
 				'data source in order to retrieve real-time data.'
 			}
 			videoSubtitle={'A live demo in the Hololens.'}
 			description2={
-				'This project was created as a mini-hachathon project ' +
+				'This project was created as a mini-hackathon project ' +
 				'during election night, when the ' +
 				'NYT data became available. The project was created with React,' +
 				' using the Tailwind css framework.'
