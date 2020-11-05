@@ -15,6 +15,7 @@ import BlackHoleProject from '../project-list/black-hole-project';
 import ProjectEGG from '../project-list/project-egg';
 import MoodWeb from '../project-list/mood-web';
 import ScrumPointer from '../project-list/scrum-pointer';
+import ElectionTracker from '../project-list/election-tracker';
 
 const useStyles = makeStyles({
 	wrapperBackground: {
@@ -41,7 +42,8 @@ const Home = () => {
 		black_hole: <BlackHoleProject />,
 		project_egg: <ProjectEGG />,
 		mood_web: <MoodWeb />,
-		scrum_pointer: <ScrumPointer />
+		scrum_pointer: <ScrumPointer />,
+		election_tracker: <ElectionTracker />
 	};
 
 	return (

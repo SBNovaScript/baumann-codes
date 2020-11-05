@@ -46,6 +46,9 @@ const Projects = () => {
 				<ListItemButtonLink link={'/projects/black_hole'}>
 					<CenteredListItemText primary={'Black Hole Simulation'} />
 				</ListItemButtonLink>
+				<ListItemButtonLink link={'/projects/election_tracker'}>
+					<CenteredListItemText primary={'Election Tracker'} />
+				</ListItemButtonLink>
 				<ListItemButtonLink link={'/projects/scrum_pointer'}>
 					<CenteredListItemText primary={'Scrum Pointer'} />
 				</ListItemButtonLink>
