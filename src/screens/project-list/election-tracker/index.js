@@ -10,7 +10,8 @@ const ElectionTracker = () => {
 			description1={
 				'I created a mobile first 2020 presidential election tracker,' +
 				' which polls a New York Times ' +
-				'data source in order to retrieve real-time data.'
+				'data source in order to retrieve real-time data. ' +
+				'Data refreshes and updates every minute.'
 			}
 			videoSubtitle={'A live demo in the Hololens.'}
 			description2={
