@@ -17,7 +17,7 @@ const ElectionTracker = () => {
 			description2={
 				'This project was created as a mini-hackathon project ' +
 				'during election night, when the ' +
-				'NYT data became available. The project was created with React,' +
+				'NYT data became available. It was created with React,' +
 				' using the Tailwind css framework.'
 			}
 			link={'https://baumann.codes/election'}
